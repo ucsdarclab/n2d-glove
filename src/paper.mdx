@@ -22,7 +22,7 @@ theme: device
 favicon: favicon.svg
 
 description: A wearable multi-finger haptic glove that renders 2D planar directional force feedback at the fingertips for contact-rich teleoperation, VR, and imitation learning.
-thumbnail: screenshot-light.png
+thumbnail: og-thumbnail.jpg
 ---
 
 import Video from "./components/Video.astro";
@@ -32,12 +32,19 @@ import Picture from "./components/Picture.astro";
 import TwoColumns from "./components/TwoColumns.astro";
 import Wide from "./components/Wide.astro";
 
-import outside from "./assets/outside.mp4";
-import heroPlaceholder from "./assets/dogs-true.png";
+import fig1Hero from "./assets/fig1_hero.jpg";
+import fig2Linkage from "./assets/fig2_linkage.png";
+import fig3Architecture from "./assets/fig3_architecture.png";
+import fig4Kinematics from "./assets/fig4_kinematics.png";
+import fig5Calibration from "./assets/fig5_calibration.jpg";
+import fig5Tracking from "./assets/fig5_tracking.png";
+import fig6Workspace from "./assets/fig6_workspace.jpg";
+import fig7Franka from "./assets/fig7_franka.jpg";
+import fig8Boxplots from "./assets/fig8_boxplots.png";
+import fig9Tlx from "./assets/fig9_tlx.png";
 
-{/* TODO: replace heroPlaceholder with the Fig. 1 glove photo (hero shot of the glove worn on a hand). */}
 <Figure>
-  <Picture slot="figure" src={heroPlaceholder} alt="The N2D Haptic Glove worn on a hand" />
+  <Picture slot="figure" src={fig1Hero} alt="The N2D Haptic Glove worn on a hand" />
   <Fragment slot="caption">**The N2D Haptic Glove** — the first multi-fingered glove design that offers 2D force feedback along the axial direction of multiple fingers, enabling probing, gentle grasping, and slip detection.</Fragment>
 </Figure>
 
@@ -64,9 +71,8 @@ The device consists of three modular finger subsystems mounted along a structura
 
 All active DOFs are driven by **GB2208 gimbal motors** through capstan transmissions, avoiding geared transmissions that introduce backlash, friction, and damping. Actuators are mechanically grounded at the base of the linkage, preventing motor masses from rotating about the finger joints. The total glove weighs **562 g** (battery off-hand).
 
-{/* TODO: replace with Fig. 2 — deconstructed view of the glove showing finger linkage joint layout. */}
 <Figure>
-  <Picture slot="figure" src={heroPlaceholder} alt="Deconstructed view of the N2D Haptic Glove finger linkage" />
+  <Picture slot="figure" src={fig2Linkage} alt="Deconstructed view of the N2D Haptic Glove finger linkage" />
   <Fragment slot="caption">Deconstructed view of the N2D Haptic Glove showing finger linkage joint layout and its correspondence to hand anatomy.</Fragment>
 </Figure>
 
@@ -86,13 +92,17 @@ All active DOFs are driven by **GB2208 gimbal motors** through capstan transmiss
 
 The Glove PC computes finger poses from encoder data and sends joint commands to the Simulation/Robot PC via ROS. Each motor–encoder pair interfaces with a Teensy 4.1 microcontroller running field-oriented control in torque mode at **1 kHz**, while higher-level torque commands stream from the Glove PC at **10 Hz** over a serial connection. An external **VIVE Tracker 3.0** provides absolute wrist pose, fused with fingertip pose estimates. Sensed interaction forces are returned through ROS and mapped to motor commands, closing the bilateral control loop.
 
-{/* TODO: replace with Fig. 3 — system architecture diagram. */}
 <Figure>
-  <Picture slot="figure" src={heroPlaceholder} alt="N2D Haptic Glove system architecture diagram" />
+  <Picture slot="figure" src={fig3Architecture} alt="N2D Haptic Glove system architecture diagram" />
   <Fragment slot="caption">System architecture. The Glove PC computes finger poses from encoder data and sends joint commands to the Simulation/Robot PC via ROS. Sensed interaction forces are returned and mapped to motor commands.</Fragment>
 </Figure>
 
 ## Kinematic Modeling
+
+<Figure>
+  <Picture slot="figure" src={fig4Kinematics} alt="Single finger linkage with three DOFs and labeled coordinate frames" />
+  <Fragment slot="caption">Kinematic analysis of a single finger linkage with three DOFs defined by $q_0, q_1, q_2$ ($q_3$ being a driven joint).</Fragment>
+</Figure>
 
 Each finger is modeled as a rigid linkage with three revolute joints $q_{f,0}, q_{f,1}, q_{f,2}$ and link lengths $a_{f,0}, a_{f,1}, a_{f,2}, a_{f,3}$. The driven angle $q_{f,3}$ is solved via the cosine law:
 
@@ -118,19 +128,27 @@ A voltage–torque mapping is identified per joint via a quasi-static calibratio
 
 The fingertip Jacobian is well-conditioned with $\kappa(\mathbf{J}^w_f) \approx 2.93$, and the manipulability $w(\mathbf{q}_f) \geq 0.82$ over **58%** of sampled configurations — confirming that directional forces can be rendered cleanly across most reachable hand postures.
 
-{/* TODO: replace with Fig. 5 — force tracking plots (X-Z circle). */}
 <Figure>
-  <Picture slot="figure" src={heroPlaceholder} alt="Force tracking results: commanded vs. measured circular trajectory in the x–z plane" />
-  <Fragment slot="caption">Commanded and measured force components along the x and z axes; right panel shows the measured forces in the x–z plane against the commanded circular trajectory.</Fragment>
+  <Picture slot="figure" src={fig5Calibration} alt="Force calibration setup with finger linkage mounted on an ATI force sensor" />
+  <Fragment slot="caption">Force calibration setup showing the world coordinate frame ($x_{\text{world}}$, $z_{\text{world}}$) and the tip coordinate frame ($x_{\text{tip}}$, $y_{\text{tip}}$).</Fragment>
+</Figure>
+
+<Figure>
+  <Picture slot="figure" src={fig5Tracking} alt="Force tracking results: commanded vs. measured along x and z axes, and in the x z plane" />
+  <Fragment slot="caption">Individual commanded and measured force components along the x and z axes (left), and measured forces in the x–z plane compared to the commanded circular trajectory (right). RMSE: $0.032$ N (x), $0.014$ N (z), $0.034$ N (magnitude), $2.81°$ (angle).</Fragment>
+</Figure>
+
+<Figure>
+  <Picture slot="figure" src={fig6Workspace} alt="Workspace range-of-motion scatter for small and large hands" />
+  <Fragment slot="caption">Workspace range of motion for a small and large hand. The overlaid manipulability indicates configuration-dependent directional force capability, showing well-conditioned force generation throughout typical operating regions.</Fragment>
 </Figure>
 
 ## Teleoperation User Study
 
 Sixteen participants teleoperated a **Franka Emika Panda** arm with an **Inspire RH56DFTP** dexterous hand to press a digital scale toward target weights of 50 g and 100 g, under three feedback modes: **no haptics**, **1D haptics**, and **full 2D haptics**. Two contact orientations were tested: axial probing (fingertip contact) and transverse probing (finger pad contact).
 
-{/* TODO: replace with Fig. 7 — Franka arm teleoperation setup photo. */}
 <Figure>
-  <Picture slot="figure" src={heroPlaceholder} alt="Franka arm and Inspire hand scale-pressing teleoperation setup" />
+  <Picture slot="figure" src={fig7Franka} alt="Franka arm and Inspire hand scale-pressing teleoperation setup" />
   <Fragment slot="caption">Teleoperation setup: a Franka arm with an Inspire dexterous hand presses a digital scale toward a target weight under three feedback conditions.</Fragment>
 </Figure>
 
@@ -149,7 +167,17 @@ In **axial probing**, median absolute error decreased progressively from no-hapt
 | Transverse 50 g | **2D** | **27.85** | $5.07\!\times\!10^{-4}$ | 0.876 |
 | Transverse 100 g | **2D** | **46.52** | 0.0315 | 0.985 |
 
+<Figure>
+  <Picture slot="figure" src={fig8Boxplots} alt="Boxplots of absolute error for 50 g and 100 g target weights across feedback modalities" />
+  <Fragment slot="caption">Boxplots of absolute error (g) for target weights of 50 g and 100 g. In axial probing, median error decreases progressively from visual-only to 1D to 2D feedback.</Fragment>
+</Figure>
+
 NASA-TLX surveys show that 2D haptic feedback significantly **reduces cognitive load** and increases **perceived feedback quality** for both axial and transverse probing.
+
+<Figure>
+  <Picture slot="figure" src={fig9Tlx} alt="NASA-TLX survey results across feedback modalities" />
+  <Fragment slot="caption">Individual NASA-TLX survey results for axial and transverse probing, demonstrating that multi-directional haptic feedback significantly reduces cognitive load while improving overall performance for participants.</Fragment>
+</Figure>
 
 ## Conclusion
 
