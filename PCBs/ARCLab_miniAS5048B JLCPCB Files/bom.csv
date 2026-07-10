@@ -1,0 +1,6 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"A1, A2",SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm,2,SolderJumper_3_Open,
+C1,0603,1,100n,CL10B104KB8NNNC
+C2,0603,1,10u,CL10A106MP8NNNC
+"J1, J2",4Pin Wire SolderPad,2,Conn_01x04_Pin,
+U1,SOP65P640X120-14N,1,AS5048B-HTSP-500,C2655184
