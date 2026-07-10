@@ -1,6 +1,6 @@
 # AI agent guide for this repo
 
-This repo is an Astro 5 + MDX site with optional React "islands," Tailwind CSS v4, math rendered through KaTeX, and a small PDF→image pipeline. It renders a single-page research project site from `src/paper.mdx` using `src/pages/index.astro` as the layout and a curated set of components.
+This repo contains an Astro 5 + MDX site with optional React "islands," Tailwind CSS v4, math rendered through KaTeX, and a small PDF→image pipeline. The site lives in the `website/` directory (all paths below are relative to `website/`); other project files live at the repo root. It renders a single-page research project site from `src/paper.mdx` using `src/pages/index.astro` as the layout and a curated set of components.
 
 ## Architecture and key files
 
@@ -21,7 +21,7 @@ This repo is an Astro 5 + MDX site with optional React "islands," Tailwind CSS v
 ## Developer workflows
 
 - Node.js: Local docs recommend Node 24+. CI uses Node 20 (see `.github/workflows/astro.yml`). If you adopt Node 24-only features, update the workflow accordingly.
-- Install & run
+- Install & run (from the `website/` directory)
   - `npm install`
   - `npm run dev` → http://localhost:4321
   - `npm run build` runs typecheck (`astro check`) then `astro build`
