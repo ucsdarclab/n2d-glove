@@ -14,12 +14,13 @@
 | Main PCB (CompactN2D) | No | https://github.com/ucsdarclab/n2d-glove/raw/refs/heads/main/PCBs/CompactN2D%20Gerbers.zip | 1 | $10 | $10 | Large PCB with Teensy 4.1 and 6x Driver Boards |
 | Encoder PCB (ARCLab miniAS5048B) | No | https://github.com/ucsdarclab/n2d-glove/raw/refs/heads/main/PCBs/ARCLab_miniAS5048B_Gerbers.zip | 10 | $1 | $10 | Small PCB for mounting encoder. 3 per finger plus 1 thumb |
 | AS5048B encoder IC (AS5048B-HTSP) | DigiKey Cart Share | https://www.digikey.com/en/products/detail/ams-osram-usa-inc/AS5048B-HTSP/3188635 | 10 | $6.46 | $64.60 | 12-bit magnetic angle encoder with programmable I2C address |
-| 4-pin encoder cable | https://www.digikey.com/short/fbdhrjq8 | https://www.digikey.com/en/products/detail/molex/2263921043/23571260 | 3 | $3.10 | $9.30 | One per finger |
+| 4-pin encoder cable | https://www.digikey.com/short/v38wvwd3 | https://www.digikey.com/en/products/detail/molex/2263921043/23571260 | 3 | $3.10 | $9.30 | One per finger |
 | 4-pin encoder connector | ^ | https://www.digikey.com/en/products/detail/molex/2147210040/16115264 | 3 | $1.26 | $3.78 | One per finger |
 | 100nF 0603 capacitor (CL10B104JB8NNNC) | ^ | https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B104JB8NNNC/3886691 | 10 | $0.04 | $0.40 | One per encoder PCB |
 | 10uF 0603 capacitor (CL10A106KP8NNNC) | ^ | https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A106KP8NNNC/3886850 | 10 | $0.10 | $1.00 | One per encoder PCB |
 | Teensy 4.1 without Ethernet (SparkFun 20359) | ^ | https://www.digikey.com/en/products/detail/sparkfun-electronics/20359/16688101 | 1 | $29.60 | $29.60 | Main PCB Microcontroller |
-| 2.54mm Screw Terminal | ^ | https://www.digikey.com/en/products/detail/on-shore-technology-inc/OSTVN02A150/1588862 | 1 | $0.89 | $0.89 | Main PCB Power Input |
+| 3.5mm Screw Terminal (GCT TAD05-02-1-L-G) | ^ | https://www.digikey.com/en/products/detail/gct/TAD05-02-1-L-G/26408919 | 1 | $0.41 | $0.41 | Main PCB Power Input |
+| 4-conductor 28 AWG ribbon cable (Adafruit 3891) | ^ | https://www.digikey.com/en/products/detail/adafruit-industries-llc/3891/9603617 | 1 | $1.95 | $1.95 | Extra wire for connecting encoders |
 | Shoulder screw 3x8mm (90318A416) | McMaster Cart Share | https://www.mcmaster.com/90318A416/ | 12 | $3.66 | $43.92 | 12 required. M2 x 0.4 threaded tip |
 | Shoulder screw 4x12mm (90323A216) | https://www.mcmaster.com/order/rcvRtedOrd.aspx?ordid=6414823583581&lnktyp=txt | https://www.mcmaster.com/90323A216/ | 4 | $4.13 | $16.52 | 4 required. M3 x 0.5 tip |
 | Shoulder screw 4x30mm (90323A443) | ^ | https://www.mcmaster.com/90323A443/ | 3 | $10.52 | $31.56 | 3 required, 1 per front GB2208 motor. M3 x 0.5 tip |
@@ -41,5 +42,5 @@
 | 1/2in x 100ft Hook and Loop Roll | No | https://www.amazon.com/dp/B0CH8K8VWC | 1 | $7.99 | $7.99 | Velcro for palm attachment, ~1ft needed |
 | Graphite Dry Lock Lubricant Powder, 4.5g | No | https://www.amazon.com/dp/B00YRZUGH6 | 1 | $5.15 | $5.15 | Lubricant for smoother abduction/adduction |
 | Elastic Bracelet String, 2 Rolls (1.5mm) | No | https://www.amazon.com/dp/B0CBTRGHJN | 1 | $7.99 | $7.99 | Elastic cord for thumb attachment, ~0.5ft needed |
-| Total Price |  |  |  |  | $606.47 |  |
+| Total Price |  |  |  |  | $607.94 |  |
 
