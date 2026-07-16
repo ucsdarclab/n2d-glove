@@ -22,7 +22,7 @@
 | 3.5mm Screw Terminal (GCT TAD05-02-1-L-G) | ^ | https://www.digikey.com/en/products/detail/gct/TAD05-02-1-L-G/26408919 | 1 | $0.41 | $0.41 | Main PCB Power Input |
 | 4-conductor 28 AWG ribbon cable (Adafruit 3891) | ^ | https://www.digikey.com/en/products/detail/adafruit-industries-llc/3891/9603617 | 1 | $1.95 | $1.95 | Extra wire for connecting encoders |
 | Shoulder screw 3x8mm (90318A416) | McMaster Cart Share | https://www.mcmaster.com/90318A416/ | 12 | $3.66 | $43.92 | 12 required. M2 x 0.4 threaded tip |
-| Shoulder screw 4x12mm (90323A216) | https://www.mcmaster.com/order/rcvRtedOrd.aspx?ordid=6414823583581&lnktyp=txt | https://www.mcmaster.com/90323A216/ | 4 | $4.13 | $16.52 | 4 required. M3 x 0.5 tip |
+| Shoulder screw 4x12mm (90323A216) | https://www.mcmaster.com/order/rcvRtedOrd.aspx?ordid=4762453288527&lnktyp=txt | https://www.mcmaster.com/90323A216/ | 4 | $4.13 | $16.52 | 4 required. M3 x 0.5 tip |
 | Shoulder screw 4x30mm (90323A443) | ^ | https://www.mcmaster.com/90323A443/ | 3 | $10.52 | $31.56 | 3 required, 1 per front GB2208 motor. M3 x 0.5 tip |
 | Shim 1/8"ID x 3/16"OD x 0.005" (99040A305) | ^ | https://www.mcmaster.com/99040A305/ | 2 pack (25) | $14.06/pack | $28.12 | 24 required. Slips over 3mm shoulder screws. Fragile recommend extra |
 | Shim 3/16"ID x 1/4"OD x 0.005" (99040A405) | ^ | https://www.mcmaster.com/99040A405/ | 1 pack (25) | $14.06/pack | $14.06 | 14 required. Slips over 4mm shoulder screws |
@@ -31,7 +31,7 @@
 | M2 hex nut (90591A265) | ^ | https://www.mcmaster.com/90591A265/ | 1 pack (100) | $2.22/pack | $2.22 | 6 required, capstan wire tensioners. |
 | M2 washer (93475A195) | ^ | https://www.mcmaster.com/93475A195/ | 1 pack (100) | $2.92/pack | $2.92 | 6 required, under tensioner nuts. |
 | M2x20 socket head screw (91290A049) | ^ | https://www.mcmaster.com/91290A049/ | 1 pack (100) | $16.58/pack | $16.58 | 6 required, capstan wire tension screws. |
-| M2.5x6 socket head screw (91292A010) | ^ | https://www.mcmaster.com/91292A010/ | 1 pack (100) | $7.14/pack | $7.14 | Encoder holder screws, 2 per encoder (20 required) |
+| M2.5x5 button head screw (92095A457) | ^ | https://www.mcmaster.com/92095A457/ | 1 pack (25) | $4.42/pack | $4.42 | Encoder holder screws, 2 per encoder (20 required) |
 | Diametric magnet 3/16"x1/16" (5862K412) | ^ | https://www.mcmaster.com/5862K412/ | 10 | $1.33 | $13.30 | One per encoder. N52, must be diametric |
 | Capstan drive wire rope 7x19 (3461T192) | ^ | https://www.mcmaster.com/3461T192/ | 1 (10 ft) | $18.37 | $18.37 | 18-8 SS extra-flexible, 0.018" dia. |
 | Copper Wire Rope Stop Sleeve, 1/32" (McMaster 3926T42) | ^ | https://www.mcmaster.com/3926T42/ | 1 pack (50) | $9.47/pack | $9.47 | Crimps to terminate capstan wire |
@@ -42,5 +42,5 @@
 | 1/2in x 100ft Hook and Loop Roll | No | https://www.amazon.com/dp/B0CH8K8VWC | 1 | $7.99 | $7.99 | Velcro for palm attachment, ~1ft needed |
 | Graphite Dry Lock Lubricant Powder, 4.5g | No | https://www.amazon.com/dp/B00YRZUGH6 | 1 | $5.15 | $5.15 | Lubricant for smoother abduction/adduction |
 | Elastic Bracelet String, 2 Rolls (1.5mm) | No | https://www.amazon.com/dp/B0CBTRGHJN | 1 | $7.99 | $7.99 | Elastic cord for thumb attachment, ~0.5ft needed |
-| Total Price |  |  |  |  | $607.94 |  |
+| Total Price |  |  |  |  | $605.22 |  |
 
